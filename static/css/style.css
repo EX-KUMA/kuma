@@ -113,6 +113,13 @@
     scroll-margin-top: var(--header-offset);
 }
 
+#exkuma-about,
+#exkuma-unsettled,
+#exkuma-workshop,
+#exkuma-news {
+    scroll-margin-top: calc(var(--header-offset) - 10px);
+}
+
 ::-moz-selection {
     background: black;
     color: white;

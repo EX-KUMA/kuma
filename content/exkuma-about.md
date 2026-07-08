@@ -26,6 +26,7 @@ en:
     - — The development and global sharing of collaborative exhibitions and media content grounded in Kaywon’s educational and creative outcomes.
     - — The establishment of sustainable networks with universities, museums, and cultural institutions worldwide to pursue joint exhibitions, residencies, and research initiatives.
 
+
     EX-KUMA is seeking international partners interested in the following forms of collaboration:
 
     - — Co-curated exhibitions, as well as exchange/touring exhibitions

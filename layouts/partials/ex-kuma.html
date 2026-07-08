@@ -33,6 +33,21 @@
                 </div>
             </div>
         </div>
+        <div class="unsettled-container" id="exkuma-unsettled">
+            {{ $about := site.GetPage "/exkuma-unsettled" }}
+
+            <br />
+
+            <div>
+                <div data-lang="ko">
+                    {{ $about.Params.ko.description | markdownify }}
+                </div>
+
+                <div data-lang="en">
+                    {{ $about.Params.en.description | markdownify }}
+                </div>
+            </div>
+        </div>
         <div class="workshop-container" id="exkuma-workshop">
             <div class="section-title">Workshop</div>
 
