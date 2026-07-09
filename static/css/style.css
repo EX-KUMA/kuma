@@ -366,6 +366,11 @@ section > [class$="-container"]:last-child {
     border-bottom: 1px solid var(--exkuma-text);
 }
 
+.container.ex-kuma section > .unsettled-container {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
 .container.ex-kuma a,
 .container.ex-kuma button {
     color: var(--exkuma-text);
@@ -701,7 +706,6 @@ details[open] > summary {
 .unsettled-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
 .unsettled-container ul li {
