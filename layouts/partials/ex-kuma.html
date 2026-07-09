@@ -142,7 +142,7 @@
                                             {{ with .Params.ko.participants }}
                                             <div class="participants">
                                                 <p>참여</p>
-                                                {{ delimit . ", " }}
+                                                {{ . }}
                                             </div>
                                             {{ end }}
                                         </div>
@@ -156,7 +156,7 @@
                                             {{ with .Params.en.participants }}
                                             <div class="participants">
                                                 <p>Participants</p>
-                                                {{ delimit . ", " }}
+                                                {{ . }}
                                             </div>
                                             {{ end }}
                                         </div>
