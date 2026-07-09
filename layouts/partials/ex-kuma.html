@@ -1,7 +1,7 @@
 <div class="container ex-kuma">
     <header>
         <div>
-            <a href="/" class="title">EX-KUMA</a>
+            <a href="/ex-kuma" class="title">EX-KUMA</a>
         </div>
         <nav>
             <a href="#exkuma-about">ABOUT</a>
@@ -12,9 +12,8 @@
         </nav>
     </header>
 
-    {{ $sticker := site.GetPage "/exkuma-sticker" }}
-
-    {{ if $sticker.Params.ko.description }}
+    {{ $sticker := site.GetPage "/exkuma-sticker" }} {{ if
+    $sticker.Params.ko.description }}
     <div class="sticker" id="sticker">
         <div id="kuma-modal">
             <p>{{ $sticker.Params.ko.title }}</p>
@@ -218,12 +217,12 @@
             <img class="logo" src="/assets/boisbuchet.png" alt="Boisbuchet" />
         </div>
         <div class="clock" id="local-clock">
-          <div class="clock-face">
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="clock-center"></div>
-          </div>
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="hand second-hand"></div>
+                <div class="clock-center"></div>
+            </div>
         </div>
     </section>
     <img class="bottom-img" src="/assets/exkuma02.jpg" alt="EX-KUMA" />
