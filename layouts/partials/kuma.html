@@ -138,6 +138,10 @@
                                         <span data-lang="en"
                                             >{{ .Params.en.title }}</span
                                         >
+                                        <div class="date">
+                                            {{ time.Format "2006.01.02"
+                                            .Params.ko.startDate }}
+                                        </div>
                                     </summary>
 
                                     <div class="content">
@@ -168,12 +172,6 @@
                                             </button>
                                         </div>
                                         {{ end }}
-                                        <div class="date">
-                                            {{ time.Format "2006.01.02"
-                                            .Params.ko.startDate }} – {{
-                                            time.Format "01.02"
-                                            .Params.ko.endDate }}
-                                        </div>
                                         <div data-lang="ko">
                                             {{ .Params.ko.description |
                                             markdownify }}
@@ -237,46 +235,10 @@
                 </div>
             </div>
         </div>
-        <div class="news-container" id="kuma-news">
-            <div class="section-title">News</div>
-
-            <div class="news-list">
-                <div class="news-head">
-                    <div class="type">Type</div>
-                    <div class="title">Title</div>
-                </div>
-
-                <div class="news-grid">
-                    <div class="news-item-container">
-                        <div class="news-item">
-                            {{ range where site.RegularPages "Section" "news" }}
-
-                            <div class="type">{{ .Params.type }}</div>
-
-                            <div class="title">
-                                <a
-                                    href="{{ .Params.link }}"
-                                    onclick="
-                                        let w = window.innerWidth * 0.5;
-                                        let h = window.innerHeight * 0.8;
-                                        window.open(
-                                            this.href,
-                                            'pdfwindow',
-                                            `width=${w},height=${h}`,
-                                        );
-                                        return false;
-                                    "
-                                >
-                                    {{ .Params.title }}
-                                </a>
-                            </div>
-
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{ partial "news.html" (dict
+            "id" "kuma-news"
+            "section" "kuma-news"
+        ) }}
         <div class="contact-container">
             <div class="subtitle">Contact</div>
             <div>
@@ -284,14 +246,13 @@
                 <p><a href="mailto:kuma@kaywon.ac.kr">kuma@kaywon.ac.kr</a></p>
             </div>
         </div>
-        <div class="clock clock-left" id="korea-clock">
-            <div class="clock-face">
-                <div class="hand hour-hand"></div>
-                <div class="hand minute-hand"></div>
-                <div class="hand second-hand"></div>
-                <div class="clock-center"></div>
-            </div>
-        </div>
+        {{ partial "partners.html" (dict "page" "/kuma-partners") }}
+        {{ partial "clock.html" (dict
+            "id" "korea-clock"
+            "class" "clock-right"
+        ) }}
     </section>
-    <img class="bottom-img" src="/assets/kuma02.jpg" />
+    <div class="bottom-img-container">
+        <img class="bottom-img" src="/assets/kuma02.jpg" />
+    </div>
 </div>

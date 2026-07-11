@@ -1,0 +1,40 @@
+<div class="news-container" id="{{ .id }}">
+    <div class="section-title">News</div>
+
+    <div class="news-list">
+        <div class="news-head">
+            <div class="type">Type</div>
+            <div class="title">Title</div>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-item-container">
+                <div class="news-item">
+                    {{ range where site.RegularPages "Section" .section }}
+
+                    <div class="type">{{ .Params.type }}</div>
+
+                    <div class="title">
+                        <a
+                            href="{{ .Params.link }}"
+                            onclick="
+                                let w = window.innerWidth * 0.5;
+                                let h = window.innerHeight * 0.8;
+                                window.open(
+                                    this.href,
+                                    'pdfwindow',
+                                    `width=${w},height=${h}`,
+                                );
+                                return false;
+                            "
+                        >
+                            {{ .Params.title }}
+                        </a>
+                    </div>
+
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

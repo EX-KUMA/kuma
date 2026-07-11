@@ -373,6 +373,8 @@ nav a:active {
 
 section {
     padding: var(--content-padding);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 section > [class$="-container"] {
@@ -485,6 +487,11 @@ details[open] > summary {
 .exhibitions-head,
 .exhibitions-item {
     grid-template-columns: 120px auto;
+}
+
+.exhibitions-item summary, .workshops-item summary {
+    display: grid;
+    grid-template-columns: 12px auto 100px;
 }
 
 .collections-item {
@@ -720,15 +727,17 @@ details[open] > summary {
 
 .logos-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;       /* 줄바꿈 */
     gap: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .logos-container .logo {
-    width: auto;
     height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .unsettled-container {
@@ -756,6 +765,7 @@ details[open] > summary {
 .clock {
     position: fixed;
     top: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: none;
@@ -833,6 +843,10 @@ main .container.kuma .clock.clock-left {
 
 .container.ex-kuma .clock-face {
     border-color: var(--exkuma-text);
+}
+
+.bottom-img-container {
+    width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
