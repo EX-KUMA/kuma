@@ -329,7 +329,7 @@ main {
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
-    background-color: #ffff92;
+    background-color: var(--exkuma-bg);
 }
 
 .sticker::after {
@@ -489,7 +489,8 @@ details[open] > summary {
     grid-template-columns: 120px auto;
 }
 
-.exhibitions-item summary, .workshops-item summary {
+.exhibitions-item summary,
+.workshops-item summary {
     display: grid;
     grid-template-columns: 12px auto 100px;
 }
@@ -727,7 +728,7 @@ details[open] > summary {
 
 .logos-container {
     display: flex;
-    flex-wrap: wrap;       /* 줄바꿈 */
+    flex-wrap: wrap; /* 줄바꿈 */
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -886,6 +887,6 @@ main .container.kuma .clock.clock-left {
     }
 
     .clock.clock-left {
-            left: 50%;
+        left: 50%;
     }
 }
