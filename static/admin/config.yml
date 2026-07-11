@@ -220,12 +220,6 @@ collections:
         file: content/exkuma-sticker.md
         i18n: true
         fields:
-          - label: 제목
-            name: title
-            widget: string
-            i18n: true
-            required: false
-
           - label: 내용
             name: description
             widget: richtext

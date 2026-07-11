@@ -99,10 +99,6 @@
 
     --exkuma-bg: #f1f3c9;
     --exkuma-text: #441845;
-
-    --table-col-1: 118px;
-    --table-col-2: minmax(0, 1fr);
-    --table-col-3: minmax(0, 1fr);
 }
 
 #kuma-about,
