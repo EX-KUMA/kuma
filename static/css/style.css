@@ -884,4 +884,8 @@ main .container.kuma .clock.clock-left {
     main .sticker {
         display: none;
     }
+
+    .clock.clock-left {
+            left: 50%;
+    }
 }
