@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: birdcall-online/kuma
+  repo: EX-KUMA/kuma
   branch: main
   base_url: https://sveltia-cms-auth.birdcall-xyz.workers.dev
 
@@ -28,8 +28,8 @@ media_libraries:
         raster_image:
           format: webp
           quality: 80
-          width: 1200
-          height: 1200
+          width: 1000
+          height: 1000
         svg:
           optimize: true
 
